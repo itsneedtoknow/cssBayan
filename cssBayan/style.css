@@ -1,0 +1,114 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    min-width: 20em;
+    max-height: 35.5em;
+    overflow-x: hidden;
+}
+.wrapper{
+    margin: 0 auto;
+}
+.accordion{
+    background-color: rgb(240, 235, 201);
+    padding: 1em 2em;
+}
+.accordion__name{
+    font-size: 2em;
+}
+.accordion__item{
+display: flex;
+flex-direction: column;
+margin-bottom: 0.5em;
+position: relative;
+}
+.accordion__radio{
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+.accordion__divider{
+    display: block;
+    border-top: solid;
+    height: 0.1em;
+    width: 100%;
+    color: rgb(185, 185, 185);
+}
+.accordion__content{   
+    background-size: cover;
+    width: 0em;
+    height: 0em;
+    margin: 0 auto;
+    /* max-height: 0; */
+}
+.acc__one{
+    background-image: url(../img/01.jpg);
+}
+.acc__two{
+    background-image: url(../img/02.jpg);
+}
+.acc__three{
+    background-image: url(../img/03.jpg);
+}
+.acc__four{
+    background-image: url(../img/04.jpg);
+}
+.acc__five{
+    background-image: url(../img/05.jpg);
+}
+.accordion__trigger:hover ~ .fa-plus:hover{
+    visibility: visible;
+}
+.accordion__trigger{
+    color: blue; 
+    font-size: 1em;
+    font-weight: 900;
+    padding:  0.5em 0;
+    display: block;
+}
+.accordion__trigger::after{
+    content: '+';
+    float: right;
+    font-size: 1em;
+    display: none;
+}
+.accordion__trigger:hover{
+    color: blue;
+}
+.accordion__radio:checked ~.accordion__trigger{
+    color: black;
+}
+
+.accordion__radio:checked ~.accordion__content{
+    /* display: block; */
+    /* max-height: 100vh; */
+    width: 10em;
+    height: 10em;
+    transition: 0.5s;
+}
+.accordion:hover .accordion__trigger{
+    color: rgb(0, 0, 0);
+}
+.accordion:hover .accordion__trigger::after{
+    display: block;
+    color: rgb(0, 0, 0);
+}
+.accordion__radio:checked + .accordion__trigger::after{
+    transform: rotate(45deg);
+}
+.accordion__header:hover >.accordion__content{
+    width: 10em;
+    height: 10em;
+    transition: 0.5s;
+}
+.accordion__header:hover > .accordion__trigger::after{
+    transform: rotate(45deg);
+}
+.accordion__header:active >.accordion__content{
+    opacity: 0.5;
+}
+.accordion__header:active >.accordion__trigger{
+    color: blue;
+    opacity: 0.5;
+}
