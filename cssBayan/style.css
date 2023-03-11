@@ -43,19 +43,19 @@ position: relative;
     /* max-height: 0; */
 }
 .acc__one{
-    background-image: url(../img/01.jpg);
+    background-image: url(../img/05.jpg);
 }
 .acc__two{
-    background-image: url(../img/02.jpg);
+    background-image: url(../img/04.jpg);
 }
 .acc__three{
     background-image: url(../img/03.jpg);
 }
 .acc__four{
-    background-image: url(../img/04.jpg);
+    background-image: url(../img/01.jpg);
 }
 .acc__five{
-    background-image: url(../img/05.jpg);
+    background-image: url(../img/02.jpg);
 }
 .accordion__trigger:hover ~ .fa-plus:hover{
     visibility: visible;
