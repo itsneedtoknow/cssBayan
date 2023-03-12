@@ -2,7 +2,7 @@ html{
     box-sizing: border-box;
 }
 body{
-    font-size: 115%;
+    font-size: 100%;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -14,11 +14,13 @@ body{
 }
 .accordion{
     background-color: rgb(240, 235, 201);
-    padding: 0.2em 2em;
+    padding: 2em 2em;
     margin: 0 auto;
 }
 .accordion__name{
-    font-size: 1.7em;
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 0.4em;
 }
 .accordion__item{
 display: flex;
@@ -59,7 +61,7 @@ padding: 0.2em 0;
 }
 .accordion__trigger{
     color: blue; 
-    font-size: 0.7em;
+    font-size: 0.9em;
     font-weight: 900;
     padding:  0.5em 0;
 }
@@ -71,8 +73,8 @@ padding: 0.2em 0;
     color: black;
 }
 .accordion__radio:checked ~.accordion__content{
-    width: 7em;
-    height: 7em;
+    width: 9em;
+    height: 9em;
     transition: 0.5s;
 }
 .accordion__header:active >.accordion__content{
@@ -87,6 +89,9 @@ padding: 0.2em 0;
         max-width: 51.25em;
         max-height: 100%;
     }
+    .accordion{
+        padding: 3em;
+    }
 }
 /* ---------------DESKTOP-------------- */
 @media(min-width: 820px){
@@ -94,11 +99,17 @@ padding: 0.2em 0;
         font-size: 100%;
     }
     .wrapper{
-        max-width: 90em;
+        max-width: 100%;
+    }
+    .accordion__name{
+        font-size: 2em;
     }
     .accordion{
-        width: 32em;
-        padding: 3em 8em;
+        width: 20em;
+        padding: 4em 6em;
+    }
+    .accordion__trigger{
+        font-size: 1em;
     }
     .accordion:hover .accordion__trigger{
         color: rgb(0, 0, 0);
