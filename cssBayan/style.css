@@ -14,18 +14,18 @@ body{
 }
 .accordion{
     background-color: rgb(240, 235, 201);
-    padding: 2em 2em;
+    padding: 1.8em;
     margin: 0 auto;
 }
 .accordion__name{
     font-size: 1.5em;
     margin: 0;
-    margin-bottom: 0.4em;
+    margin-bottom: 1.5em;
 }
 .accordion__item{
 display: flex;
 flex-direction: column;
-padding: 0.2em 0;
+margin: 0.6em 0;
 }
 .accordion__radio{
     display: none;
@@ -33,9 +33,12 @@ padding: 0.2em 0;
 .accordion__divider{
     display: block;
     border-top: solid;
-    height: 0.1em;
+    height: 0.01em;
     width: 100%;
     color: rgb(185, 185, 185);
+}
+.accordion__header{
+    padding: 1.5em 0 0;
 }
 .accordion__content{   
     background-size: cover;
@@ -63,7 +66,10 @@ padding: 0.2em 0;
     color: blue; 
     font-size: 0.9em;
     font-weight: 900;
-    padding:  0.5em 0;
+    padding:  1em 0;
+}
+.trigger__name{
+    display: block;
 }
 .fa-plus{
     visibility: hidden;
@@ -73,8 +79,8 @@ padding: 0.2em 0;
     color: black;
 }
 .accordion__radio:checked ~.accordion__content{
-    width: 9em;
-    height: 9em;
+    width: 10em;
+    height: 10em;
     transition: 0.5s;
 }
 .accordion__header:active >.accordion__content{
@@ -119,6 +125,9 @@ padding: 0.2em 0;
     .accordion__radio:checked ~.accordion__content{
         width: 15em;
         height: 15em;
+    }
+    .accordion__header{
+        padding: 1em 0 1em;
     }
     .accordion__header:hover >.accordion__content{
         width: 15em;
