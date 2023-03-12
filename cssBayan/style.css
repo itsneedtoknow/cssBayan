@@ -14,7 +14,7 @@ body{
 }
 .accordion{
     background-color: rgb(240, 235, 201);
-    padding: 1.8em;
+    padding: 4em 1.8em;
     margin: 0 auto;
 }
 .accordion__name{
