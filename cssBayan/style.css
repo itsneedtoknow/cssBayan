@@ -79,8 +79,8 @@ margin: 0.6em 0;
     color: black;
 }
 .accordion__radio:checked ~.accordion__content{
-    width: 10em;
-    height: 10em;
+    width: 13em;
+    height: 13em;
     transition: 0.5s;
 }
 .accordion__header:active >.accordion__content{
