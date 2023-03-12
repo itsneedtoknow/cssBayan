@@ -2,27 +2,28 @@ html{
     box-sizing: border-box;
 }
 body{
-    font-size: 1em;
+    font-size: 115%;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 .wrapper{
-    max-width: 20em;
-    max-height: 35.5em;
+    max-width: 100%;
+    max-height: 100%;
     margin: 0 auto;
 }
 .accordion{
     background-color: rgb(240, 235, 201);
-    padding: 1em 2em;
+    padding: 0.2em 2em;
     margin: 0 auto;
 }
 .accordion__name{
-    font-size: 2em;
+    font-size: 1.7em;
 }
 .accordion__item{
 display: flex;
 flex-direction: column;
-margin-bottom: 0.5em;
-position: relative;
+padding: 0.2em 0;
 }
 .accordion__radio{
     display: none;
@@ -58,11 +59,9 @@ position: relative;
 }
 .accordion__trigger{
     color: blue; 
-    font-size: 1em;
+    font-size: 0.7em;
     font-weight: 900;
     padding:  0.5em 0;
-    /* display: block; */
-
 }
 .fa-plus{
     visibility: hidden;
@@ -72,27 +71,27 @@ position: relative;
     color: black;
 }
 .accordion__radio:checked ~.accordion__content{
-    width: 10em;
-    height: 10em;
+    width: 7em;
+    height: 7em;
     transition: 0.5s;
 }
-
 .accordion__header:active >.accordion__content{
     opacity: 0.5;
 }
-
 /* ------------------- TABLET VERSION-------------------*/
-@media(min-width: 321px) and (max-width: 820px){
+@media(min-width: 481px) and (max-width: 819px){
+    body{
+        font-size: 110%;
+    }
     .wrapper{
         max-width: 51.25em;
-        max-height: 73.75em;
+        max-height: 100%;
     }
-
 }
 /* ---------------DESKTOP-------------- */
-@media(min-width: 1920px){
+@media(min-width: 820px){
     body{
-        font-size: 1.6em;
+        font-size: 100%;
     }
     .wrapper{
         max-width: 90em;
@@ -124,8 +123,7 @@ position: relative;
     .accordion__trigger{
         display: flex;
         justify-content: space-between;
-    }
-    
+    }    
     .accordion:hover .fa-plus{
         visibility: visible;
         transition: 0.5s;
@@ -146,6 +144,4 @@ position: relative;
         cursor: pointer;
         transition: 0.5s;
     }
-    
-    
 }
